@@ -1,3 +1,5 @@
+name: Salutation
+
 on: [push]
 
 jobs:
