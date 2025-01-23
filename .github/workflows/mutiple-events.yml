@@ -1,0 +1,19 @@
+name: CI on Multiple Events
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  release:
+    types: [created, published]
+
+jobs:
+  build-and-test:
+    runs-on: unbuntu@latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node Alpine Image
+        run: echo "Setting up node Image..."

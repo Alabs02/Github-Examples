@@ -1,0 +1,13 @@
+name: CI on Push
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: unbuntu@latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run a one-line script
+        run: echo "I'm a one-line scripts"
