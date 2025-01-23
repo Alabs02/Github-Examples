@@ -8,7 +8,7 @@ on:
         required: true
         type: string
       greeting:
-        description: "Type of greeting",
+        description: "Type of greeting"
         required: true
         type: string
       data:
