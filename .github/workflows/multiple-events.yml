@@ -1,0 +1,23 @@
+name: CI on Multiple Events
+
+on:
+  push:
+    branches:
+      - main
+      - uat
+  pull_request:
+    branches:
+      - main
+  release:
+    types: [created, published]
+
+jobs:
+  hello-world:
+    runs-on: ubuntu@latest
+    steps:
+      - name: Echo Basic Information
+        run: |
+          echo "REF: $GIHUB_REF"
+          echo: "JOB ID: $GITHUB_JOB"
+          echo: "ACTION: $GITHUB_ACTION"
+          echo: "ACTOR: $GITHUB_ACTOR"
